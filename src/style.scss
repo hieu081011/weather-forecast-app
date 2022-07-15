@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    
+}
+body{
+    color: white;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-size:cover;
+    
+    position: relative;
+    & .temp-display{
+        position:  absolute;
+        bottom: 100px;
+        left: 100px;
+        display: flex;
+        gap:0 20px;
+        & .temperature{
+            font-size: 7rem;
+            line-height: 6.5rem;
+            font-weight: 700;
+        }
+        & .city-date{
+            display: flex;
+            flex-direction: column;
+            align-self: flex-end;
+            align-items: center;
+            & .city{
+                font-size: 3rem;
+                font-weight: 600;
+                max-width: 250px;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+            }
+            & .other-info{
+                display: flex;
+                gap:0 5px;
+                & >h5{
+                    
+                }
+            }
+        }
+        & .weather{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-self: flex-end;
+            
+            & >span{
+                font-size: 2.5rem;
+                height: 2.5rem;
+            }
+            & >h3{
+                font-size: 1rem;
+                font-weight: 590;
+                text-transform: capitalize;
+            }
+        }
+    }
+    & .side-bar{
+        position: absolute;
+        height: 100vh;
+        right:  0;
+        top: 0;
+        width: 400px;
+        padding: 30px 40px;
+        background: black;
+        opacity: .5;
+        & >div:first-child{
+            position: relative;
+            & >input{
+                border: none;
+                background-color: transparent;
+                color: white;
+                &::placeholder{
+                    color: white;
+                    font-size: 1rem;
+                    opacity: .7;
+                }
+                width: 80%;
+                padding-bottom: 7px;
+                border-bottom: 1px solid rgba($color: white, $alpha: .7);
+                &:focus{
+                    outline: none;
+                }
+            }
+            
+            & .search-suggestions{
+                position: absolute;
+                top:27px;
+                background-color: white;
+                padding: 10px;
+                z-index: 1;
+                background-color: rgba($color: white, $alpha: .9);
+                width: 80%;
+                color: black;
+                & >div{
+                    padding: 2px ;
+                    transition-duration: .3s;
+                    &:hover, :focus{
+
+                        color: white;
+                        cursor: pointer;
+                        background-color: rgba($color: #000000, $alpha: 1.0);
+                    }
+
+                }
+            }
+        }
+        & .relate-location{
+            display: flex;
+            flex-direction: column;
+            padding: 40px 0;
+            gap: 25px 0;
+            border-bottom: 1px solid rgba($color: white, $alpha: .7);
+            >h4{
+                font-weight: 500;
+                font-size: 1rem;
+                opacity: .7;
+
+            }
+        }
+        & .weather-detail{
+            display: flex;
+            gap:25px;
+            flex-direction: column;
+            padding: 30px 0;
+            border-bottom: 1px solid rgba($color: white, $alpha: .7);
+            & >div{
+                display: flex;
+                justify-content: space-between;
+                & >h3{
+                    font-size: 1rem;
+                    opacity: .7;
+                }
+                & >h4{
+                    font-weight:200;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    & .search-button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 20px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    
+}   
