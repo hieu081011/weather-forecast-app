@@ -72,6 +72,7 @@ body{
         padding: 30px 40px;
         background: black;
         opacity: .5;
+        backdrop-filter: blur(10px);
         & >div:first-child{
             position: relative;
             & >input{
